@@ -1,4 +1,4 @@
-@import url('/Poppins\ \(1\)/');
+/* @import url('/Poppins\ \(1\)/'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 body {
@@ -321,19 +321,22 @@ body {
     margin-left: 130px;
     border: 1px solid #555;
     font-family: poppins, sans-serif;
+    margin-left: 170px;
 }
 
 .download-cv:hover{
-    background-color: #ff6f6f;
+    background-color: #8c6fff;
     color: #fff;
     cursor: pointer;
     transition: all 0.6s ease 0s;
+    border-color: #8c6fff;
 }
 
 .my-img{
     max-width: 305px;
     margin: 0 30px;
     position: relative;
+    /* box-shadow: 20px rgba(0, 0, 0, 0.5); */
 }
 
 .my-img::before{
@@ -349,11 +352,26 @@ body {
     opacity: 0.3;
 }
 
+.my-img:hover{
+    box-shadow: 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease 0s;
+}
+
 .img-inner{
     position: relative;
     transform-style: preserve-3d;
     border-radius: 15px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease 0s;
+    /* box-shadow: 20px rgba(0, 0, 0, 0.5); */
+}
+
+.img-inner:hover{
+    box-shadow: 20px rgba(32, 32, 32, 0.5);
 }
 
 .img-card{
@@ -368,14 +386,18 @@ body {
 
 .img:hover{
     filter: grayscale(0%);
+    transform: perspective(1400px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1);
     /* transform: scale(1.1); */
     transition: all 0.3s ease 0s;
+    box-shadow: 20px rgba(32, 32, 32, 0.5);
 }
 
 .img-card:hover{
     transform: perspective(1400px) rotateX(0deg) rotateY(0deg) scale3d(1.1, 1.1, 1.1);
     transition: all 0.3s ease 0s;
-    box-shadow: 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px rgba(32, 32, 32, 0.5);
+    z-index: 5;
+    /* opacity: 0.8; */
 }
 
 .my-skills{
@@ -409,4 +431,405 @@ body {
     bottom: 0;
     left: 0;
     border-radius: 5px;
+}
+
+.scroll-next{
+    width: 170px;
+    height: 65px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+.scroll-container .down{
+    margin-top: 30px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    left: 0;
+    color: #000;
+}
+
+.text{
+    position: absolute;
+    top: 43%;
+    left: -14px;
+    display: inline-block;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    margin-top: -9px;
+    font-size: 14px;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
+    background: #f6f6f6;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.text::after{
+    content: "";
+    background-image: url('assets/scroll-arrow.png');
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+}
+
+.circle{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 4;
+}
+
+.hollow-container .art{
+    width: 18px;
+    height: 190px;
+    background-image: url('assets/6.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 30px;
+    right: 370px;
+    transform: rotate(45deg);
+    opacity: 0.2;
+    animation: MovesUpDown 5s linear infinite;
+}
+
+@keyframes MovesUpDown {
+    0% ,100%{
+        bottom: -280px;
+    }
+    50% {
+        bottom: -250px;
+    }
+}
+
+.abt-conatainer{
+    padding: 50px 0;
+    /* width: 1320px; */
+}
+
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(var(--bs-gutter-y) * -1);  
+}
+
+.section-title{
+    position: relative;
+    text-align: center;
+    /* margin: auto; */
+    width: 1296px;
+    height: 169px;
+    padding: 0 15px;
+}
+
+.section-title h2{
+    font-size: 36px;
+    line-height: 29px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding: 50px 0;
+    font-family: poppins, sans-serif;
+    position: relative;
+    color: #222;
+}
+
+.section-title h2 span{
+    color: #ff6f6f;
+    /* font-family: poppins, sans-serif; */
+    /* display: inline-grid; */
+}
+
+.section-title .bg-title{
+    width: 1326px;
+    height: 60px;
+    margin: auto;
+    /* margin-right: 750px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    font-family: poppins, sans-serif;
+    font-size: 130px;
+    font-weight: 700;
+    color: #f5f5f5;
+    line-height: 60px;
+    text-shadow: 5px -5px 10px #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+}
+
+.skills{
+    height: 667px;
+    width: 633px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.skill-progress{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.skill-card{
+    margin-bottom: -30px;
+    /* display: flex; */
+}
+
+.about-me .skill-box{
+    height: 180px;
+    /* width: 240px; */
+    margin-bottom: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+}
+
+svg{
+    vertical-align: middle;
+    height: 80px;
+    width: 80px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.col-md-6{
+    height: 271px;
+    width: 301px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-me .skill-box .progress{
+    background: transparent;
+    display: inline-block;
+    margin-bottom: 20px;
+    fill: transparent;
+    z-index: 3;
+    --bs-progress-height: 1rem;
+    --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: var(--bs-secondary-bg);
+    --bs-progress-border-radius: var(--bs-border-radius);
+    --bs-progress-box-shadow: var(--bs-box-shadow-inset);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-bg: #0d6efd;
+    --bs-progress-bar-transition: width 0.6s ease;
+    /* display: flex; */
+    /* height: var(--bs-progress-height); */
+    overflow: hidden;
+    font-size: var(--bs-progress-font-size);
+    /* background-color: var(--bs-progress-bg); */
+    border-radius: var(--bs-progress-border-radius);
+}
+
+.progress .track {
+    stroke-width: 6;
+    stroke: #ddd;
+    transform: rotate(90deg) translate(0px, -80px);
+}
+
+.progress .fill {
+    stroke-dasharray: 219.9907836914;
+    /* stroke-dashoffset: -219.9907836914; */
+    /* -webkit-transition: stroke-dashoffset 1s; */
+    transition: stroke-dashoffset 1s;
+    stroke-width: 10;
+    stroke: #ff6f6f;
+    /* stroke-width: 6; */
+    fill: none;
+    /* stroke-dasharray: 219.91;  */
+    stroke-dashoffset: 219.91;
+    transition: stroke-dashoffset 2s ease;
+    transform: rotate(90deg); /* Start at top */
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 2s ease;
+}
+
+
+.progress .value {
+    fill: #ff6f6f;
+    font-size: 20px;
+    text-anchor: middle;
+    font-weight: 600;
+    font-family: poppins, sans-serif;
+}
+
+.skill-box h3 {
+    height: 24px;
+    margin-bottom: 8px;
+    display: block;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
+    /* margin-inline-start: 0px; */
+    /* margin-inline-end: 0px; */
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+p {
+    display: block;
+    font-family: poppins, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: center;
+}
+
+.progress.active .value {
+    fill: #8c6fff;
+}
+
+.progress.active .fill {
+    stroke: #8c6fff;
+    /* stroke: #ff6f61; */
+    stroke-width: 10;
+    fill: none;
+    stroke-dasharray: 219.91; /* circumference of your circle (approx for radius 35) */
+    stroke-dashoffset: 219.91;
+    transition: stroke-dashoffset 2s ease;
+}
+
+
+.skill-box::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: -38%;
+    right: -15%;
+    border-radius: 15px;
+}
+
+.skill-box::after{
+    transition: all 0.3s ease-in-out;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.06);
+    position: absolute;
+    top: -15%;
+    right: -32%;
+    border-radius: 15px;
+}
+
+h4{
+    font-family: poppins, sans-serif;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-details{
+    height: 667px;
+    width: 633px;
+}
+
+.skills .about-details p{
+    margin-top: 0;
+}
+
+.abt-text{
+    /* font-family: "poppins, sans-serif"; */
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
+.my-info{
+    height: 353px;
+    width: 633px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.my-info ul{
+    /* height: 353px;
+    width: 633px; */
+    margin: 0;
+    padding: 0;
+}
+
+.my-info ul li:first-child{
+    border-top: 1px solid #dfdfdf;
+}
+
+.my-info ul li{
+    width: 633px;
+    list-style: none;
+    font-family: poppins, sans-serif;
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #555;
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.my-info ul li .list-title{
+    min-width: 110px;
+    display: inline-flex;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+}
+
+.my-info ul li b {
+    margin-right: 10px;
+    color: #333;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
 }
