@@ -7,36 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>   
-        <header>
-            <nav>
-                <button class = "sidebar_toggeler" id="toggleSidebar">
-                    <div class="container">
-                        <div class="svg svg1"></div>
-                        <div class="svg svg2"></div>
-                        <div class="svg svg3"></div>
-                        <div class="svg svg4"></div>    
+    <div id="app">  
+        <div id="home">
+            <header>
+                <nav>
+                    <button class="sidebar_toggeler" id="toggleSidebar">
+                        <div class="container">
+                            <div class="svg svg1"></div>
+                            <div class="svg svg2"></div>
+                            <div class="svg svg3"></div>
+                            <div class="svg svg4"></div>    
+                        </div>
+                    </button>
+                </nav>
+            </header>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar_open">
+                    <button class="close_btn" id="closeSidebar" aria-label="Close Sidebar">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                    </button>
+                    <div class="sidebar_content">
+                        <ul class="sidebar_menu">
+                            <li class="nav-item" id="Home"><a href="#home">Home</a></li>
+                            <li class="nav-item" id="About Me"><a href="#about">About Me</a></li>
+                            <li class="nav-item" id="Experience"><a href="#experience">Experience</a></li>
+                            <li class="nav-item" id="Projects"><a href="#projects">Projects</a></li>
+                            <li class="nav-item" id="Contact"><a href="#contact">Contact</a></li>
+                        </ul>
                     </div>
-                </button>
-            </nav>
-        </header>
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar_open">
-                <button class="close_btn" id="closeSidebar" aria-label="Close Sidebar">
-                    <span class="bar bar1"></span>
-                    <span class="bar bar2"></span>
-                </button>
-                <div class="sidebar_content">
-                    <ul class="sidebar_menu">
-                        <li class="nav-item" id="Home"><a href="#home">Home</a></li>
-                        <li class="nav-item" id="About Me"><a href="#about">About Me</a></li>
-                        <li class="nav-item" id="Experience"><a href="#experience">Experience</a></li>
-                        <li class="nav-item" id="Projects"><a href="#projects">Projects</a></li>
-                        <li class="nav-item" id="Contact"><a href="#contact">Contact</a></li>
-                    </ul>
                 </div>
             </div>
-        </div>
+        </div> 
         
         <div>
             <section id="Home" class="home-main">
@@ -47,12 +49,15 @@
                         <div class="home-item">
                             <div class="details">
                                 <h1 class="main-title">
-                                    <span>My Self,
+                                    <span>
+                                        My Self,
                                         <br>
                                         <span class="name">&nbsp; Jeet Dange</span>
                                     </span>
                                 </h1>
-                                <p class="my-details">A web developer and engineering student who's passionate about creating impactful digital experiences</p>
+                                <p class="my-details">
+                                    A web developer and engineering student who's passionate about creating impactful digital experiences
+                                </p>
                                 <button class="download-cv" id="download-cv" onclick="downloadCV()">Download CV</button>
                             </div>
                             <div class="my-img">
@@ -63,16 +68,148 @@
                                 </div>
                             </div>
                             <div class="my-skills">
-                                <h3>I am a
+                                <h3>
+                                    I am a
                                     <br>
-                                    <span class="skills">Student</span>
+                                    <span class="skill">Student</span>
                                 </h3>
+                            </div>
+                        </div>
+                        <div class="art"></div>
+                    </div>
+                </div>
+                <div class="scroll-next" data-scroll="about">
+                    <div class="scroll-container">
+                        <span class="down">
+                            <span class="text"></span>
+                            <span class="circle"></span>
+                        </span>   
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section id="about" class="about-me">
+                <div class="abt-container">
+                    <div     class="row">
+                        <div class="section-title">
+                            <h2>About
+                                <span>Me</span>
+                            </h2>
+                            <span class="bg-title">About</span>
+                        </div>
+                        <div class="skills">
+                            <div class="skill-progress">
+                                <div class="skill-card row">
+                                    <div class="col-md-6">
+                                        <div class="skill-box">
+                                            <svg class="progress noselect " data-progress="87" x="0px" y="0px" viewBox="0 0 80 80">
+                                                <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0"></path>
+                                                <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" style="stroke-dashoffset: -28.598801879882814"></path>
+                                                <text class="value" x="50%" y="58%">87%</text>
+                                                </svg>
+                                                <h3>HTML</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="skill-box">
+                                            <svg class="progress noselect " data-progress="80" x="0px" y="0px" viewBox="0 0 80 80">
+                                                <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0"></path>
+                                                <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" style="stroke-dashoffset: -43.99815673828125"></path>
+                                                <text class="value" x="50%" y="58%">80%</text>
+                                            </svg>
+                                            <h3>CSS</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="skill-box">
+                                            <svg class="progress noselect active" data-progress="95" x="0px" y="0px" viewBox="0 0 80 80">
+                                                <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0"></path>
+                                                <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" style="stroke-dashoffset: -10.999539184570313"></path>
+                                                <text class="value" x="50%" y="58%">95%</text>
+                                            </svg>
+                                            <h3>JavaScript</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="skill-box">
+                                            <svg class="progress noselect " data-progress="70" x="0px" y="0px" viewBox="0 0 80 80">
+                                                <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0"></path>
+                                                <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" style="stroke-dashoffset: -65.99723510742187"></path>
+                                                <text class="value" x="50%" y="58%">70%</text>
+                                            </svg>
+                                            <h3>React</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <div class="about-details">
+                                <h4>Creativity bleeds from the pen of inspiration</h4>
+                                <p class="abt-text">
+                                    I am your client Consultant having &lt;b&gt;8+ years&lt;/b&gt; of experience in thisfieldprovides complete range of marketing materials and clienting solution to any industry aswellas corporate lients maintaining their reputation and increasing the client awareness usingPR &amp; other print media &amp; online marketing activities.
+                                </p>
+                                <p class="abt-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, consequuntur. Sint perferendis, ratione placeat ex nostrum dolorem saepe incidunt enim?
+                                </p>
+                                <div class="my-info">
+                                    <ul class="info-detail">
+                                        <li>
+                                            <span class="list-title">
+                                                Full Name
+                                                <b>:</b>
+                                            </span>
+                                            Jeet Dange
+                                        </li>
+                                        <li>
+                                            <span class="list-title">
+                                                Age
+                                                <b>:</b>
+                                            </span>
+                                            19 Years
+                                        </li>
+                                        <li>
+                                            <span class="list-title">
+                                                Language
+                                                <b>:</b>
+                                            </span>
+                                            English, Hindi, Marathi
+                                        </li>
+                                        <li>
+                                            <span class="list-title">
+                                                Phone no 
+                                                <b>:</b>
+                                            </span>
+                                            0000000000
+                                        </li>
+                                        <li>
+                                            <span class="list-title">
+                                                Email
+                                                <b>:</b>
+                                            </span>
+                                            jeetdange454@gmail.com
+                                        </li>
+                                        <li>
+                                            <span class="list-title">
+                                                College
+                                                <b>:</b>
+                                            </span>
+                                            NBN Sinhgad Technical Institute Campus
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+
     </div>
 
 <script src="script.js"></script>
